@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Main, Pro, Teams, Pricing, Docu, Error } from "./pages";
 
 function App() {
+  useEffect(() => {
+    console.log("rendering...");
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Main />}></Route>
+      <Route path="pro" element={<Pro />}></Route>
+      <Route path="teams" element={<Teams />}></Route>
+      <Route path="pricing" element={<Pricing />}></Route>
+      <Route path="documentation" element={<Docu />}></Route>
+      <Route path="/error" element={<Error />}></Route>
+      <Route path="/*" element={<Navigate to="/error" replace />} />
+    </Routes>
   );
 }
 
