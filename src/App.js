@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Main, Pro, Teams, Pricing, Docu, Error } from "./pages";
+import "./app.css";
 
 function App() {
   useEffect(() => {
