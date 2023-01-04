@@ -5,7 +5,7 @@
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
 }
 .header-container {
-  padding: 20px 0;
+  padding: 1.6rem 0;
 }
 .header-container:first-child {
   border-bottom: 1px solid #000;
@@ -17,6 +17,10 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.4rem;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
 }
 .header-logo .logo {
   font-size: 2rem;
@@ -39,7 +43,10 @@
 /* Search Box */
 /* Logo */
 .search-logo {
-  width: 70px;
+  margin-top: 0.8rem;
+}
+.search-logo svg {
+  width: 7rem;
 }
 /* Input */
 .search-bar {
