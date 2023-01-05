@@ -4,15 +4,10 @@
   border-top-style: solid;
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
 }
-.header-container {
-  padding: 1.6rem 0;
-}
 .header-container:first-child {
   border-bottom: 1px solid #000;
 }
 .header-row {
-  padding-left: 21rem;
-  padding-right: 21rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

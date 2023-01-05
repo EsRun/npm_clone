@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       <div className="header-box">
-        <div className="header-container">
+        <div className="container">
           <div className="header-row">
             <div className="header-logo">
               <span className="logo">❤</span>
@@ -30,7 +30,7 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        <div className="header-container">
+        <div className="container">
           <div className="header-row">
             <div className="search-logo">
               <svg viewBox="0 0 780 250">
