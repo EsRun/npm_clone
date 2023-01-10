@@ -42,6 +42,37 @@ export default function Main() {
                   premium JavaScript development experience, with features like
                   private packages.
                 </div>
+                <div
+                  style={{
+                    marginTop: "8rem",
+                    display: "flex",
+                    justifyContent: "space-around",
+                    fontSize: "1.6rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  <div
+                    style={{
+                      padding: "1.6rem 3.2rem",
+                      width: "230px",
+                      backgroundColor: "#FFC329",
+                      borderRadius: "5rem",
+                      color: "#000",
+                    }}
+                  >
+                    <a style={{}}>Sign up for free</a>
+                  </div>
+                  <div
+                    style={{
+                      padding: "1.6rem 3.2rem",
+                      width: "230px",
+                      border: "2px solid #fff",
+                      borderRadius: "5rem",
+                    }}
+                  >
+                    <a style={{ color: "#fff" }}>Learn about Pro</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
