@@ -1,3 +1,23 @@
+footer {
+  border-top: 1px solid #ccc;
+  font-size: 1.6rem;
+}
 .footer-box {
   padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-row {
+  padding: 3rem;
+}
+.footer-row-title {
+  margin: 1.7rem 0;
+  display: block;
+  font-weight: bold;
+}
+.footer-row li {
+  padding: 1rem 0;
+}
+.footer-row li a {
+  color: #5e5e5e;
 }
