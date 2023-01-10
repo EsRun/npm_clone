@@ -78,6 +78,30 @@ export default function Main() {
           </div>
         </div>
       </section>
+      <section>
+        <div>
+          <div>
+            <img
+              alt=""
+              role="presentation"
+              src="https://static.npmjs.com/attachments/ck3uweazy72ye8874y9kkxnx1-gak.png"
+              srcset="https://static.npmjs.com/attachments/ck3uweazy72ye8874y9kkxnx1-gak.png, https://static.npmjs.com/attachments/ck3uwed1cmso79y74pjugy10f-gak-2x.png 2x, https://static.npmjs.com/attachments/ck3uweeyt72yk887420va22p9-gak-3x.png 3x"
+              class="db center mb4"
+            ></img>
+          </div>
+          <div>
+            Bring the best of open source to you, your team, and your company
+          </div>
+          <div>
+            Relied upon by more than 11 million developers worldwide, npm is
+            committed to making JavaScript development elegant, productive, and
+            safe. The free npm Registry has become the center of JavaScript code
+            sharing, and with more than one million packages, the largest
+            software registry in the world. Our other tools and services take
+            the Registry, and the work you do around it, to the next level.
+          </div>
+        </div>
+      </section>
     </>
   );
 }

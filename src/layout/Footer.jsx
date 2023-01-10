@@ -57,7 +57,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="footer-row">
+            <div className="footer-row w100">
               <span className="footer-row-title">Support</span>
               <ul className="">
                 <li className="">
@@ -82,7 +82,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="footer-row">
+            <div className="footer-row w100">
               <span className="footer-row-title">Company</span>
               <ul className="">
                 <li className="">
@@ -102,7 +102,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="footer-row">
+            <div className="footer-row w100">
               <span className="footer-row-title">Terms &amp; Policies</span>
               <ul className="">
                 <li className="">
