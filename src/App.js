@@ -14,9 +14,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route path="pro" element={<Pro />}></Route>
-        <Route path="teams" element={<Teams />}></Route>
-        <Route path="pricing" element={<Pricing />}></Route>
+        <Route path="product" element={<Pricing />}></Route>
+        <Route path="product/pro" element={<Pro />}></Route>
+        <Route path="product/teams" element={<Teams />}></Route>
         <Route path="documentation" element={<Docu />}></Route>
         <Route path="/error" element={<Error />}></Route>
         <Route path="/*" element={<Navigate to="/error" replace />} />

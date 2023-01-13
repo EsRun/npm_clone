@@ -15,13 +15,13 @@ export default function Header() {
             <nav className="header-nav">
               <ul>
                 <li>
-                  <Link to={"/pro"}>Pro</Link>
+                  <Link to={"/product/pro"}>Pro</Link>
                 </li>
                 <li>
-                  <Link to={"/teams"}>Teams</Link>
+                  <Link to={"/product/teams"}>Teams</Link>
                 </li>
                 <li>
-                  <Link to={"/pricing"}>Pricing</Link>
+                  <Link to={"/product"}>Pricing</Link>
                 </li>
                 <li>
                   <Link to={"documentation"}>Documentation</Link>
