@@ -44,6 +44,9 @@ export default function Login() {
   user-select: none;
   width: 200px;
   -webkit-clip-path: circle(100px at center);
+    img{
+      width: 100%;
+    }
     > div{
       animation-name: _26ff033a;
       animation-duration: 3s;
@@ -147,11 +150,11 @@ export default function Login() {
                             />
                           </div>
                         </div>
+                        <img
+                          alt=""
+                          src="https://static.npmjs.com/c9e19250d48d66f0e9c70c9b3991bbdb.png"
+                        ></img>
                       </div>
-                      <img
-                        alt=""
-                        src="https://static.npmjs.com/c9e19250d48d66f0e9c70c9b3991bbdb.png"
-                      ></img>
                     </div>
                   </div>
                 </MoveImage>
