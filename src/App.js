@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Main, Pro, Teams, Pricing, Docu, Error } from "./pages";
-import "./app.css";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 

@@ -1,13 +1,14 @@
-import "../resources/css/footer.css";
+import { Link } from "react-router-dom";
+import { Footers, FooterBox, FooterRow } from "../resources/css/footerStyle";
 
 export default function Footer() {
   return (
     <>
-      <footer>
+      <Footers>
         <div className="container">
-          <div className="footer-box">
-            <div className="footer-row">
-              <div className="" style={{ paddingTop: "2rem", width: "5rem" }}>
+          <FooterBox>
+            <FooterRow>
+              <div>
                 <a
                   target="_blank"
                   title="npm repository"
@@ -56,8 +57,8 @@ export default function Footer() {
                   </svg>
                 </a>
               </div>
-            </div>
-            <div className="footer-row w100">
+            </FooterRow>
+            <FooterRow>
               <span className="footer-row-title">Support</span>
               <ul className="">
                 <li className="">
@@ -81,8 +82,8 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="footer-row w100">
+            </FooterRow>
+            <FooterRow>
               <span className="footer-row-title">Company</span>
               <ul className="">
                 <li className="">
@@ -101,8 +102,8 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="footer-row w100">
+            </FooterRow>
+            <FooterRow>
               <span className="footer-row-title">Terms &amp; Policies</span>
               <ul className="">
                 <li className="">
@@ -126,10 +127,10 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-          </div>
+            </FooterRow>
+          </FooterBox>
         </div>
-      </footer>
+      </Footers>
     </>
   );
 }
