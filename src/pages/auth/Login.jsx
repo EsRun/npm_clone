@@ -108,6 +108,16 @@ export default function Login() {
       }
     }
   `;
+  const Form = styled.form`
+    color: #000000b3;
+  `;
+  const LoginTitle = styled.h1`
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid #0000001a;
+  `;
   return (
     <>
       <TopBorder>
@@ -158,6 +168,63 @@ export default function Login() {
                     </div>
                   </div>
                 </MoveImage>
+                <Form id="login" method="POST" action="/login">
+                  <LoginTitle>Sign In</LoginTitle>
+                  <div class="">
+                    <div class=" nowrap flex justify-between">
+                      <label
+                        class="_64c2ccaf db mt1 mb2 f5 fw6 black-90 nowrap "
+                        for="login_username"
+                      >
+                        Username
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      id="login_username"
+                      aria-required="false"
+                      aria-invalid="false"
+                      name="username"
+                      placeholder=""
+                      element="input"
+                      value=""
+                    />
+                  </div>
+                  <div class="dib fr mt2">
+                    <a href="/forgot">Forgot password?</a>
+                  </div>
+                  <div class="">
+                    <div class=" nowrap flex justify-between">
+                      <label
+                        class="_64c2ccaf db mt1 mb2 f5 fw6 black-90 nowrap "
+                        for="login_password"
+                      >
+                        Password
+                      </label>
+                    </div>
+                    <input
+                      type="password"
+                      id="login_password"
+                      aria-required="false"
+                      aria-invalid="false"
+                      required=""
+                      minlength="0"
+                      name="password"
+                      placeholder=""
+                      element="input"
+                      value=""
+                    />
+                  </div>
+                  <input
+                    type="hidden"
+                    aria-hidden="true"
+                    name="csrftoken"
+                    value="E4d0Ndj1gXAji6_XvuWXWMnlGHVo0m4Zj3wg0a1ZU7H"
+                  />
+                  <button type="submit" title="" aria-label="">
+                    Sign In
+                  </button>
+                </Form>
               </div>
             </div>
           </LoginBox>
