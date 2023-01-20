@@ -118,6 +118,20 @@ export default function Login() {
     font-weight: 600;
     border-bottom: 1px solid #0000001a;
   `;
+  const LoginInput = styled.div`
+    font-size: 1.6rem;
+    input {
+      margin: 0.8rem 0.8rem 0.8rem 0;
+      padding: 1.6rem 0.8rem;
+      width: 100%;
+      border: 1px solid #0000001a;
+      border-radius: 0.5rem;
+    }
+  `;
+  const LoginLabel = styled.label`
+    margin: 0.4rem 0 0.8rem;
+    font-weight: bold;
+  `;
   return (
     <>
       <TopBorder>
@@ -170,9 +184,11 @@ export default function Login() {
                 </MoveImage>
                 <Form id="login" method="POST" action="/login">
                   <LoginTitle>Sign In</LoginTitle>
-                  <div>
+                  <LoginInput>
                     <div>
-                      <label for="login_username">Username</label>
+                      <LoginLabel htmlFor="login_username" autoComplete="off">
+                        Username
+                      </LoginLabel>
                     </div>
                     <input
                       type="text"
@@ -182,15 +198,14 @@ export default function Login() {
                       name="username"
                       placeholder=""
                       element="input"
-                      value=""
                     />
-                  </div>
+                  </LoginInput>
                   <div>
                     <a href="/forgot">Forgot password?</a>
                   </div>
-                  <div>
+                  <LoginInput>
                     <div>
-                      <label for="login_password">Password</label>
+                      <LoginLabel htmlFor="login_password">Password</LoginLabel>
                     </div>
                     <input
                       type="password"
@@ -198,13 +213,12 @@ export default function Login() {
                       aria-required="false"
                       aria-invalid="false"
                       required=""
-                      minlength="0"
+                      minLength="0"
                       name="password"
                       placeholder=""
                       element="input"
-                      value=""
                     />
-                  </div>
+                  </LoginInput>
                   <input
                     type="hidden"
                     aria-hidden="true"
@@ -215,6 +229,13 @@ export default function Login() {
                     Sign In
                   </button>
                 </Form>
+                <a
+                  href="/signup"
+                  class="_6126477b db center tc mt3 mb2 f5 fw6 hover-black-80"
+                  rel="npm:signup"
+                >
+                  Create Account
+                </a>
               </div>
             </div>
           </LoginBox>
