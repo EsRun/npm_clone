@@ -170,14 +170,9 @@ export default function Login() {
                 </MoveImage>
                 <Form id="login" method="POST" action="/login">
                   <LoginTitle>Sign In</LoginTitle>
-                  <div class="">
-                    <div class=" nowrap flex justify-between">
-                      <label
-                        class="_64c2ccaf db mt1 mb2 f5 fw6 black-90 nowrap "
-                        for="login_username"
-                      >
-                        Username
-                      </label>
+                  <div>
+                    <div>
+                      <label for="login_username">Username</label>
                     </div>
                     <input
                       type="text"
@@ -190,17 +185,12 @@ export default function Login() {
                       value=""
                     />
                   </div>
-                  <div class="dib fr mt2">
+                  <div>
                     <a href="/forgot">Forgot password?</a>
                   </div>
-                  <div class="">
-                    <div class=" nowrap flex justify-between">
-                      <label
-                        class="_64c2ccaf db mt1 mb2 f5 fw6 black-90 nowrap "
-                        for="login_password"
-                      >
-                        Password
-                      </label>
+                  <div>
+                    <div>
+                      <label for="login_password">Password</label>
                     </div>
                     <input
                       type="password"
