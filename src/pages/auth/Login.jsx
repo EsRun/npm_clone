@@ -196,12 +196,13 @@ export default function Login() {
                       aria-required="false"
                       aria-invalid="false"
                       name="username"
-                      placeholder=""
                       element="input"
                     />
                   </LoginInput>
                   <div>
-                    <a href="/forgot">Forgot password?</a>
+                    <Link Link to={"/forgot"}>
+                      Forgot password?
+                    </Link>
                   </div>
                   <LoginInput>
                     <div>
@@ -215,27 +216,17 @@ export default function Login() {
                       required=""
                       minLength="0"
                       name="password"
-                      placeholder=""
                       element="input"
                     />
                   </LoginInput>
-                  <input
-                    type="hidden"
-                    aria-hidden="true"
-                    name="csrftoken"
-                    value="E4d0Ndj1gXAji6_XvuWXWMnlGHVo0m4Zj3wg0a1ZU7H"
-                  />
+                  <input type="hidden" aria-hidden="true" name="csrftoken" />
                   <button type="submit" title="" aria-label="">
                     Sign In
                   </button>
                 </Form>
-                <a
-                  href="/signup"
-                  class="_6126477b db center tc mt3 mb2 f5 fw6 hover-black-80"
-                  rel="npm:signup"
-                >
+                <Link to={"/signup"} rel="npm:signup">
                   Create Account
-                </a>
+                </Link>
               </div>
             </div>
           </LoginBox>
