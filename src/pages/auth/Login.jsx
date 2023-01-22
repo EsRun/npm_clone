@@ -220,9 +220,7 @@ export default function Login() {
                     />
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
-                  <button type="submit" title="" aria-label="">
-                    Sign In
-                  </button>
+                  <button type="submit">Sign In</button>
                 </Form>
                 <Link to={"/signup"} rel="npm:signup">
                   Create Account
