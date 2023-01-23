@@ -1,9 +1,13 @@
-import React from "react";
+import styled from "styled-components";
 
 export default function Error() {
+  const Main = styled.main`
+    display: flex;
+    justify-content: center;
+  `;
   return (
     <>
-      <main style={{ display: "flex", justifyContent: "center" }}>
+      <Main>
         <div
           style={{
             padding: "4rem 1.6rem",
@@ -21,7 +25,7 @@ export default function Error() {
             alt='"Missing" poster depicting npm&apos;s mascot wombat'
           />
         </div>
-      </main>
+      </Main>
     </>
   );
 }
