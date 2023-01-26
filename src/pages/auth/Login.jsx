@@ -12,6 +12,9 @@ import {
   LoginLabel,
   LoginTitle,
   MoveImage,
+  SignBtn,
+  ForgotLabel,
+  CreateLink,
 } from "../../components/styles/LoginStyle";
 
 export default function Login() {
@@ -99,9 +102,9 @@ export default function Login() {
                       element="input"
                     />
                   </LoginInput>
-                  <div>
+                  <ForgotLabel>
                     <Link to={"/forgot"}>Forgot password?</Link>
-                  </div>
+                  </ForgotLabel>
                   <LoginInput>
                     <div>
                       <LoginLabel htmlFor="login_password">Password</LoginLabel>
@@ -118,11 +121,11 @@ export default function Login() {
                     />
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
-                  <button type="submit">Sign In</button>
+                  <SignBtn type="submit">Sign In</SignBtn>
                 </Form>
-                <Link to={"/signup"} rel="npm:signup">
+                <CreateLink to={"/signup"} rel="npm:signup">
                   Create Account
-                </Link>
+                </CreateLink>
               </div>
             </div>
           </LoginBox>

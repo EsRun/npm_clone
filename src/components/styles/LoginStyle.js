@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const TopBorder = styled.div`
@@ -115,6 +116,7 @@ export const LoginInput = styled.div`
     margin: 0.8rem 0.8rem 0.8rem 0;
     padding: 1.6rem 0.8rem;
     width: 100%;
+    height: 38px;
     border: 1px solid #0000001a;
     border-radius: 0.5rem;
   }
@@ -122,4 +124,36 @@ export const LoginInput = styled.div`
 export const LoginLabel = styled.label`
   margin: 0.4rem 0 0.8rem;
   font-weight: bold;
+`;
+
+export const ForgotLabel = styled.div`
+  float: right;
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  text-decoration: underline;
+`;
+
+export const SignBtn = styled.button`
+  margin: 0.8rem 0;
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  background-color: #fff;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(17, 17, 17, 0.04) 100%
+  );
+  border: 1px solid rgba(22, 22, 22, 0.2);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  color: #000;
+`;
+
+export const CreateLink = styled(Link)`
+  margin: 1.6rem 0 0.8rem;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
 `;
