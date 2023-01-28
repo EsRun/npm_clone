@@ -12,7 +12,7 @@ const authSlice = createSlice({
       state.isAuth = action.payload.isAuth;
     },
     logOut(state, action) {
-      state.isAuth = action.payload.isAuth;
+      state.isAuth = false;
     },
   },
 });
