@@ -80,9 +80,30 @@ export default function Header() {
               </SearchInput>
               <button>Search</button>
             </SearchBar>
+            {/* 비 로그인 시 노출 */}
             <div className="search-sign">
               <SignButton to={"/signup"}>Sign Up</SignButton>
               <SignButton to={"/login"}>Sign In</SignButton>
+            </div>
+            {/* 로그인 시 노출 */}
+            <div>
+              <nav>
+                <button></button>
+                <span>
+                  <div>
+                    <h2>아이디</h2>
+                    <ul>
+                      <li>Profile</li>
+                      <li>Packages</li>
+                      <li>Acoount</li>
+                      <li>Biling Info</li>
+                      <li>Access Token</li>
+                      <li>Ad Organization</li>
+                      <li>Sign Out</li>
+                    </ul>
+                  </div>
+                </span>
+              </nav>
             </div>
           </HeaderRow>
         </div>
