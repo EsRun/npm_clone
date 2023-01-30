@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 import {
   HeaderBox,
   HeaderLogo,
@@ -10,6 +13,10 @@ import {
   SignButton,
 } from "../resources/css/headerStyle";
 export default function Header() {
+  const auth = useSelector((state) => state.auth);
+  useEffect(() => {
+    console.log(auth);
+  }, []);
   return (
     <header>
       <HeaderBox>
@@ -80,31 +87,32 @@ export default function Header() {
               </SearchInput>
               <button>Search</button>
             </SearchBar>
-            {/* 비 로그인 시 노출 */}
-            <div className="search-sign">
-              <SignButton to={"/signup"}>Sign Up</SignButton>
-              <SignButton to={"/login"}>Sign In</SignButton>
-            </div>
-            {/* 로그인 시 노출 */}
-            <div>
-              <nav>
-                <button></button>
-                <span>
-                  <div>
-                    <h2>아이디</h2>
-                    <ul>
-                      <li>Profile</li>
-                      <li>Packages</li>
-                      <li>Acoount</li>
-                      <li>Biling Info</li>
-                      <li>Access Token</li>
-                      <li>Ad Organization</li>
-                      <li>Sign Out</li>
-                    </ul>
-                  </div>
-                </span>
-              </nav>
-            </div>
+            {auth === false ? (
+              <div className="search-sign">
+                <SignButton to={"/signup"}>Sign Up</SignButton>
+                <SignButton to={"/login"}>Sign In</SignButton>
+              </div>
+            ) : (
+              <div>
+                <nav>
+                  <button></button>
+                  <span>
+                    <div>
+                      <h2>아이디</h2>
+                      <ul>
+                        <li>Profile</li>
+                        <li>Packages</li>
+                        <li>Acoount</li>
+                        <li>Biling Info</li>
+                        <li>Access Token</li>
+                        <li>Ad Organization</li>
+                        <li>Sign Out</li>
+                      </ul>
+                    </div>
+                  </span>
+                </nav>
+              </div>
+            )}
           </HeaderRow>
         </div>
       </HeaderBox>
