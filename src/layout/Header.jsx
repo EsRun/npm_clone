@@ -11,6 +11,7 @@ import {
   SearchInput,
   SearchLogo,
   SignButton,
+  Profile,
 } from "../resources/css/headerStyle";
 export default function Header() {
   const auth = useSelector((state) => state.auth);
@@ -93,9 +94,34 @@ export default function Header() {
                 <SignButton to={"/login"}>Sign In</SignButton>
               </div>
             ) : (
-              <div>
+              <Profile>
                 <nav>
-                  <button></button>
+                  <button
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      border: "none",
+                      background: "transparent",
+                    }}
+                    className="f66d27e1 flex bg-white items-center self-center pt1-ns pt2 pointer"
+                    aria-label="Profile menu"
+                    aria-expanded="true"
+                  >
+                    <img
+                      style={{ borderRadius: "100%" }}
+                      alt="avatar"
+                      className="a3eb5146 flex-none br-100"
+                      src="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9hMWNjYWI4NjQyNDIzNTM2NTZlNzczMDkyOGZlNDUzMT9zaXplPTUwJmRlZmF1bHQ9cmV0cm8ifQ.2Ly7jdtT7TS3c0J2TebQVuFSEufCpOqZCSihSs_E-pE"
+                      aria-hidden="true"
+                    />
+                    <div className="pl1" aria-hidden="true">
+                      <svg viewBox="0 0 11.64 5.82" height="6px" fill="#666">
+                        <g id="6a308a62-c62e-4b78-87b6-759dd1ef54e5">
+                          <polygon points="10 0 5 5 0 0 10 0"></polygon>
+                        </g>
+                      </svg>
+                    </div>
+                  </button>
                   <span>
                     <div>
                       <h2>아이디</h2>
@@ -111,7 +137,7 @@ export default function Header() {
                     </div>
                   </span>
                 </nav>
-              </div>
+              </Profile>
             )}
           </HeaderRow>
         </div>

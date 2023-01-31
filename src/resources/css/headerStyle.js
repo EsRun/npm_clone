@@ -101,3 +101,5 @@ export const SignButton = styled(Link)`
     ${HovereEaseIn};
   }
 `;
+
+export const Profile = styled.div``;
