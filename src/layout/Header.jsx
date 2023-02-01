@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../redux/reducer";
 import { Link } from "react-router-dom";
-
 import {
   HeaderBox,
   HeaderLogo,
@@ -13,11 +13,20 @@ import {
   SignButton,
   Profile,
 } from "../resources/css/headerStyle";
+
 export default function Header() {
+  const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    dispatch(authActions.logOut({ isAuth: false }));
+  };
+
   useEffect(() => {
+    console.log("Header");
     console.log(auth);
-  }, []);
+  }, [auth]);
   return (
     <header>
       <HeaderBox>
@@ -102,19 +111,22 @@ export default function Header() {
                       alignItems: "center",
                       border: "none",
                       background: "transparent",
+                      cursor: "pointer",
                     }}
-                    className="f66d27e1 flex bg-white items-center self-center pt1-ns pt2 pointer"
                     aria-label="Profile menu"
                     aria-expanded="true"
                   >
                     <img
-                      style={{ borderRadius: "100%" }}
+                      style={{
+                        width: "40px",
+                        borderRadius: "100%",
+                        border: "1px solid #000",
+                      }}
                       alt="avatar"
-                      className="a3eb5146 flex-none br-100"
                       src="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9hMWNjYWI4NjQyNDIzNTM2NTZlNzczMDkyOGZlNDUzMT9zaXplPTUwJmRlZmF1bHQ9cmV0cm8ifQ.2Ly7jdtT7TS3c0J2TebQVuFSEufCpOqZCSihSs_E-pE"
                       aria-hidden="true"
                     />
-                    <div className="pl1" aria-hidden="true">
+                    <div style={{ paddingLeft: "0.4rem" }} aria-hidden="true">
                       <svg viewBox="0 0 11.64 5.82" height="6px" fill="#666">
                         <g id="6a308a62-c62e-4b78-87b6-759dd1ef54e5">
                           <polygon points="10 0 5 5 0 0 10 0"></polygon>
@@ -123,8 +135,31 @@ export default function Header() {
                     </div>
                   </button>
                   <span>
-                    <div>
-                      <h2>아이디</h2>
+                    <div
+                      style={{
+                        position: "absolute",
+                        cursor: "auto",
+                        backgroundColor: "#fff",
+                        padding: "2rem",
+                        boxShadow: "0px 2px 7px rgb(0 0 0 / 12%)",
+                        border: "1px solid #ccc",
+                        borderRadius: "7px",
+                        right: "0",
+                        top: "97%",
+                      }}
+                    >
+                      <h2
+                        style={{
+                          margin: "0",
+                          paddingBottom: "14px",
+                          fontSize: "19px",
+                          color: "#4d4d4d",
+                          borderBottom: "1px solid #e5e5e5",
+                          fontWeight: "600",
+                        }}
+                      >
+                        아이디
+                      </h2>
                       <ul>
                         <li>Profile</li>
                         <li>Packages</li>
@@ -132,7 +167,7 @@ export default function Header() {
                         <li>Biling Info</li>
                         <li>Access Token</li>
                         <li>Ad Organization</li>
-                        <li>Sign Out</li>
+                        <li onClick={handleLogout}>Sign Out</li>
                       </ul>
                     </div>
                   </span>
