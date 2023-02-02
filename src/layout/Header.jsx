@@ -16,7 +16,7 @@ import {
 
 export default function Header() {
   const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
+  const auth = useSelector((state) => state.auth.isAuth);
 
   const handleLogout = (e) => {
     e.preventDefault();

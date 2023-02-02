@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authActions } from "../../redux/reducer";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -18,17 +18,14 @@ import {
 } from "../../components/styles/LoginStyle";
 
 export default function Login() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
 
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(authActions.logIn({ isAuth: true }));
-  };
-
-  const handleLogout = (e) => {
-    e.preventDefault();
-    dispatch(authActions.logOut({ isAuth: false }));
+    navigate("/");
   };
 
   useEffect(() => {
@@ -86,7 +83,7 @@ export default function Login() {
                   </div>
                 </MoveImage>
                 <Form id="login" onSubmit={handleLogin}>
-                  <LoginTitle onClick={handleLogout}>Sign In</LoginTitle>
+                  <LoginTitle>Sign In</LoginTitle>
                   <LoginInput>
                     <div>
                       <LoginLabel htmlFor="login_username" autoComplete="off">
