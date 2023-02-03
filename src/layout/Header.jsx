@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../redux/reducer";
 import { Link } from "react-router-dom";
@@ -17,13 +17,18 @@ import {
 } from "../resources/css/headerStyle";
 
 export default function Header() {
+  const [profileToggle, setProfileToggle] = useState(false);
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth.isAuth);
 
+  // 로그아웃
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(authActions.logOut({ isAuth: false }));
   };
+
+  // 프로필 토글
+  const profileToggleFn = () => {};
 
   useEffect(() => {
     console.log("Header");
