@@ -12,6 +12,8 @@ import {
   SearchLogo,
   SignButton,
   Profile,
+  ProfileUl,
+  ProfileDiv,
 } from "../resources/css/headerStyle";
 
 export default function Header() {
@@ -135,19 +137,7 @@ export default function Header() {
                     </div>
                   </button>
                   <span>
-                    <div
-                      style={{
-                        position: "absolute",
-                        cursor: "auto",
-                        backgroundColor: "#fff",
-                        padding: "2rem",
-                        boxShadow: "0px 2px 7px rgb(0 0 0 / 12%)",
-                        border: "1px solid #ccc",
-                        borderRadius: "7px",
-                        right: "0",
-                        top: "97%",
-                      }}
-                    >
+                    <ProfileDiv>
                       <h2
                         style={{
                           margin: "0",
@@ -160,16 +150,30 @@ export default function Header() {
                       >
                         아이디
                       </h2>
-                      <ul>
-                        <li>Profile</li>
-                        <li>Packages</li>
-                        <li>Acoount</li>
-                        <li>Biling Info</li>
-                        <li>Access Token</li>
-                        <li>Ad Organization</li>
-                        <li onClick={handleLogout}>Sign Out</li>
-                      </ul>
-                    </div>
+                      <ProfileUl>
+                        <li>
+                          <Link>Profile</Link>
+                        </li>
+                        <li>
+                          <Link>Packages</Link>
+                        </li>
+                        <li>
+                          <Link>Acoount</Link>
+                        </li>
+                        <li>
+                          <Link>Biling Info</Link>
+                        </li>
+                        <li>
+                          <Link>Access Token</Link>
+                        </li>
+                        <li>
+                          <Link>Ad Organization</Link>
+                        </li>
+                        <li onClick={handleLogout}>
+                          <Link>Sign Out</Link>
+                        </li>
+                      </ProfileUl>
+                    </ProfileDiv>
                   </span>
                 </nav>
               </Profile>
