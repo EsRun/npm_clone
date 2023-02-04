@@ -108,6 +108,7 @@ export const Profile = styled.div`
 
 export const ProfileDiv = styled.div`
   position: absolute;
+  display: ${(props) => (props.toggle ? "block" : "none")};
   cursor: auto;
   background-color: #fff;
   padding: 2rem;

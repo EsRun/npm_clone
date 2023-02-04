@@ -28,7 +28,11 @@ export default function Header() {
   };
 
   // 프로필 토글
-  const profileToggleFn = () => {};
+  const profileToggleFn = (e) => {
+    e.preventDefault();
+    setProfileToggle((el) => !el);
+    console.log("현재=", profileToggle);
+  };
 
   useEffect(() => {
     console.log("Header");
@@ -104,13 +108,13 @@ export default function Header() {
               </SearchInput>
               <button>Search</button>
             </SearchBar>
-            {auth === false ? (
+            {!auth ? (
               <div className="search-sign">
                 <SignButton to={"/signup"}>Sign Up</SignButton>
                 <SignButton to={"/login"}>Sign In</SignButton>
               </div>
             ) : (
-              <Profile>
+              <Profile onClick={profileToggleFn}>
                 <nav>
                   <button
                     style={{
@@ -142,7 +146,7 @@ export default function Header() {
                     </div>
                   </button>
                   <span>
-                    <ProfileDiv>
+                    <ProfileDiv toggle={profileToggle}>
                       <h2
                         style={{
                           margin: "0",
