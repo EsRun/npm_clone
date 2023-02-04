@@ -31,11 +31,9 @@ export default function Header() {
   const profileToggleFn = (e) => {
     e.preventDefault();
     setProfileToggle((el) => !el);
-    console.log("현재=", profileToggle);
   };
 
   useEffect(() => {
-    console.log("Header");
     console.log(auth);
   }, [auth]);
   return (
