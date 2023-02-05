@@ -20,7 +20,7 @@ import {
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
+  const auth = useSelector((state) => state.auth.isAuth);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,6 +29,8 @@ export default function Login() {
   };
 
   useEffect(() => {
+    // 로그인 상태 시 루트로 이동
+    if (auth) navigate("/");
     console.log(auth);
   }, [auth]);
 
