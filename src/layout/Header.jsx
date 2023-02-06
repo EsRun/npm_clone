@@ -111,6 +111,7 @@ export default function Header() {
               </div>
             ) : (
               "ㅇㅇ"
+              // 프로필 컴포넌트 삽입 시 무한로딩 발생, 왜??????
             )}
           </HeaderRow>
         </div>
