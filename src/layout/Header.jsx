@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../redux/reducer";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import Profile from "../pages/auth/Profile";
 import { Link } from "react-router-dom";
 import {
@@ -15,21 +14,7 @@ import {
 } from "../resources/css/headerStyle";
 
 export default function Header() {
-  const [profileToggle, setProfileToggle] = useState(false);
-  const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth.isAuth);
-
-  // 로그아웃
-  const handleLogout = (e) => {
-    e.preventDefault();
-    dispatch(authActions.logOut({ isAuth: false }));
-  };
-
-  // 프로필 토글
-  const profileToggleFn = (e) => {
-    e.preventDefault();
-    setProfileToggle((el) => !el);
-  };
 
   useEffect(() => {
     console.log(auth);
@@ -110,7 +95,7 @@ export default function Header() {
                 <SignButton to={"/login"}>Sign In</SignButton>
               </div>
             ) : (
-              "ㅇㅇ"
+              <Profile />
               // 프로필 컴포넌트 삽입 시 무한로딩 발생, 왜??????
             )}
           </HeaderRow>

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ProfileDiv, ProfileUl } from "../../resources/css/headerStyle";
-import { useSelector, useDispatch } from "react-redux";
+import {
+  ProfileBox,
+  ProfileDiv,
+  ProfileUl,
+} from "../../resources/css/auth/profileStyle";
+import { useDispatch } from "react-redux";
 import { authActions } from "../../redux/reducer";
 
 export default function Profile() {
@@ -22,7 +26,7 @@ export default function Profile() {
 
   return (
     <>
-      <Profile onClick={profileToggleFn}>
+      <ProfileBox onClick={profileToggleFn}>
         <nav>
           <button
             style={{
@@ -93,7 +97,7 @@ export default function Profile() {
             </ProfileDiv>
           </span>
         </nav>
-      </Profile>
+      </ProfileBox>
     </>
   );
 }
