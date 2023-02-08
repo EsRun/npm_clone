@@ -4,7 +4,27 @@ export const ProfileBox = styled.div`
   position: relative;
 `;
 
-export const ProfileDiv = styled.div`
+export const ProfileBtn = styled.button`
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+`;
+
+export const ProfileBtnImg = styled.img`
+  width: 40px;
+  border-radius: 100%;
+  border: 1px solid #000;
+`;
+
+export const ProfileArrowIcon = styled.div`
+  padding-left: 0.4rem;
+`;
+
+export const ProfileMenuBox = styled.div``;
+
+export const ProfileMenu = styled.div`
   position: absolute;
   display: ${(props) => (props.toggle ? "block" : "none")};
   cursor: auto;
