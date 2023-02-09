@@ -92,14 +92,7 @@ export default function Login() {
                         Username
                       </LoginLabel>
                     </div>
-                    <input
-                      type="text"
-                      id="login_username"
-                      aria-required="false"
-                      aria-invalid="false"
-                      name="username"
-                      element="input"
-                    />
+                    <input type="text" id="login_username" name="username" />
                   </LoginInput>
                   <ForgotLabel>
                     <Link to={"/forgot"}>Forgot password?</Link>
@@ -111,12 +104,8 @@ export default function Login() {
                     <input
                       type="password"
                       id="login_password"
-                      aria-required="false"
-                      aria-invalid="false"
-                      required=""
                       minLength="0"
                       name="password"
-                      element="input"
                     />
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
