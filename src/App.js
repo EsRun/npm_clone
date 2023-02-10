@@ -1,13 +1,7 @@
-import { useEffect, Suspense, lazy } from "react";
+import { useEffect, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Layout, Main } from "./pages";
+import { Layout, Main, Pricing, Pro, Teams, Docu, Error } from "./pages";
 import { Login, SignUp } from "./pages/auth";
-
-const Error = lazy(() => import("./pages/Error.jsx"));
-const Pricing = lazy(() => import("./pages/Pricing.jsx"));
-const Pro = lazy(() => import("./pages/Pro.jsx"));
-const Teams = lazy(() => import("./pages/Teams.jsx"));
-const Docu = lazy(() => import("./pages/Documentation.jsx"));
 
 function App() {
   useEffect(() => {
