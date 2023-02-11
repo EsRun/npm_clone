@@ -16,22 +16,27 @@ import {
   ForgotLabel,
   CreateLink,
 } from "../../components/styles/LoginStyle";
+import { useState } from "react";
 
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth.isAuth);
+  const [userId, setUserId] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(authActions.logIn({ isAuth: true }));
+    dispatch(authActions.logIn({ isAuth: true, userName: userId }));
     navigate("/");
   };
 
+  const getUserInfo = (e) => {
+    setUserId(e.target.value);
+  };
+
   useEffect(() => {
-    // 로그인 상태 시 루트로 이동
-    if (auth) navigate("/");
-    console.log(auth);
+    // 로그인 상태 시 루트로 이동, replace 옵션 차이가 없음 뭐지?
+    if (auth) navigate("/", { replace: false });
   }, [auth]);
 
   return (
@@ -92,7 +97,15 @@ export default function Login() {
                         Username
                       </LoginLabel>
                     </div>
-                    <input type="text" id="login_username" name="username" />
+                    <input
+                      type="text"
+                      id="login_username"
+                      aria-required="false"
+                      aria-invalid="false"
+                      name="username"
+                      value={userId}
+                      onChange={getUserInfo}
+                    />
                   </LoginInput>
                   <ForgotLabel>
                     <Link to={"/forgot"}>Forgot password?</Link>
@@ -104,8 +117,12 @@ export default function Login() {
                     <input
                       type="password"
                       id="login_password"
+                      aria-required="false"
+                      aria-invalid="false"
+                      required=""
                       minLength="0"
                       name="password"
+                      element="input"
                     />
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />

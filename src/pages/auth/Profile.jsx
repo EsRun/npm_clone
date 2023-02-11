@@ -9,10 +9,11 @@ import {
   ProfileMenuBox,
   ProfileUl,
 } from "../../resources/css/auth/profileStyle";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../redux/reducer";
 
 export default function Profile() {
+  const UserName = useSelector((state) => state.auth.userName);
   const [profileToggle, setProfileToggle] = useState(false);
   const dispatch = useDispatch();
 
@@ -55,7 +56,7 @@ export default function Profile() {
                   fontWeight: "600",
                 }}
               >
-                아이디
+                {UserName}
               </h2>
               <ProfileUl>
                 <li>
