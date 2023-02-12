@@ -7,7 +7,7 @@ export default function Logout() {
 
   const handleLogout = (e) => {
     e.preventDefault();
-    dispatch(authActions.logOut({ isAuth: false }));
+    dispatch(authActions.logOut());
   };
   return <div>Logout</div>;
 }
