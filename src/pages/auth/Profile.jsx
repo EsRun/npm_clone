@@ -19,7 +19,7 @@ export default function Profile() {
 
   // 로그아웃
   const handleLogout = (e) => {
-    dispatch(authActions.logOut({ isAuth: false }));
+    dispatch(authActions.logOut());
   };
 
   // 프로필 토글
