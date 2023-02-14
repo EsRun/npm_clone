@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// 인증
 const authSlice = createSlice({
   name: "auth",
   initialState: {

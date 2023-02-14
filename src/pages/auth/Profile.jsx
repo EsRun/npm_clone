@@ -11,15 +11,16 @@ import {
 } from "../../resources/css/auth/profileStyle";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../redux/reducer";
+import { useEffect } from "react";
 
 export default function Profile() {
-  const UserName = useSelector((state) => state.auth.userName);
+  const auth = useSelector((state) => state.auth);
   const [profileToggle, setProfileToggle] = useState(false);
   const dispatch = useDispatch();
 
   // 로그아웃
   const handleLogout = (e) => {
-    dispatch(authActions.logOut());
+    dispatch(authActions.logOut(auth));
   };
 
   // 프로필 토글
@@ -27,6 +28,7 @@ export default function Profile() {
     setProfileToggle((el) => !el);
   };
 
+  useEffect(() => {}, []);
   return (
     <>
       <ProfileBox onClick={profileToggleFn}>
@@ -56,7 +58,7 @@ export default function Profile() {
                   fontWeight: "600",
                 }}
               >
-                {UserName}
+                {auth.userName}
               </h2>
               <ProfileUl>
                 <li>
