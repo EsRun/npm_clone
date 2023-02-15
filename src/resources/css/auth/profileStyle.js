@@ -70,3 +70,17 @@ export const ProfileUl = styled.ul`
     }
   }
 `;
+
+export const ProfileLi = styled.li`
+  padding: 0.8rem;
+  &:nth-child(6) {
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    border-bottom: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    padding-bottom: 15px;
+    margin-bottom: 8px;
+    color: #cb3837;
+  }
+`;

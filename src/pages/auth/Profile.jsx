@@ -8,6 +8,7 @@ import {
   ProfileMenu,
   ProfileMenuBox,
   ProfileUl,
+  ProfileLi,
 } from "../../resources/css/auth/profileStyle";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "../../redux/reducer";
@@ -61,27 +62,27 @@ export default function Profile() {
                 {auth.userName}
               </h2>
               <ProfileUl>
-                <li>
+                <ProfileLi>
                   <Link>Profile</Link>
-                </li>
-                <li>
+                </ProfileLi>
+                <ProfileLi>
                   <Link>Packages</Link>
-                </li>
-                <li>
+                </ProfileLi>
+                <ProfileLi>
                   <Link>Acoount</Link>
-                </li>
-                <li>
+                </ProfileLi>
+                <ProfileLi>
                   <Link>Biling Info</Link>
-                </li>
-                <li>
+                </ProfileLi>
+                <ProfileLi>
                   <Link>Access Token</Link>
-                </li>
-                <li>
+                </ProfileLi>
+                <ProfileLi>
                   <Link>Ad Organization</Link>
-                </li>
-                <li onClick={handleLogout}>
+                </ProfileLi>
+                <ProfileLi onClick={handleLogout}>
                   <Link>Sign Out</Link>
-                </li>
+                </ProfileLi>
               </ProfileUl>
             </ProfileMenu>
           </ProfileMenuBox>
