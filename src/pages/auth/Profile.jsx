@@ -78,7 +78,7 @@ export default function Profile() {
                   <Link>Access Token</Link>
                 </ProfileLi>
                 <ProfileLi>
-                  <Link>Ad Organization</Link>
+                  <Link>Add Organization</Link>
                 </ProfileLi>
                 <ProfileLi onClick={handleLogout}>
                   <Link>Sign Out</Link>

@@ -81,6 +81,8 @@ export const ProfileLi = styled.li`
     border-top: 1px solid #efefef;
     padding-bottom: 15px;
     margin-bottom: 8px;
-    color: #cb3837;
+    > a {
+      color: #cb3837;
+    }
   }
 `;
