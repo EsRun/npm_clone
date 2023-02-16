@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authActions } from "../../redux/reducer";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,6 +21,7 @@ import { useState } from "react";
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const input1 = useRef(null);
   const auth = useSelector((state) => state.auth.isAuth);
   const [userId, setUserId] = useState("");
 
@@ -35,6 +36,7 @@ export default function Login() {
   };
 
   useEffect(() => {
+    input1.current.focus();
     // 로그인 상태 시 루트로 이동, replace 옵션 차이가 없음 뭐지?
     if (auth) navigate("/", { replace: false });
   }, [auth]);
@@ -105,6 +107,7 @@ export default function Login() {
                       name="username"
                       value={userId}
                       onChange={getUserInfo}
+                      ref={input1}
                     />
                   </LoginInput>
                   <ForgotLabel>
