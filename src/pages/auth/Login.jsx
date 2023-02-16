@@ -31,8 +31,16 @@ export default function Login() {
     navigate("/");
   };
 
+  // 사용자 정보 설정
   const getUserInfo = (e) => {
     setUserId(e.target.value);
+  };
+
+  // 로그인 엔터
+  const loginEnter = (e) => {
+    if (e.key === "Enter") {
+      handleLogin();
+    }
   };
 
   useEffect(() => {
@@ -107,6 +115,7 @@ export default function Login() {
                       name="username"
                       value={userId}
                       onChange={getUserInfo}
+                      onKeyDown={loginEnter}
                       ref={input1}
                     />
                   </LoginInput>
