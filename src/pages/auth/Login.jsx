@@ -26,7 +26,6 @@ export default function Login() {
   const [userId, setUserId] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault();
     dispatch(authActions.logIn({ isAuth: true, userName: userId }));
     navigate("/");
   };
@@ -38,7 +37,7 @@ export default function Login() {
 
   // 로그인 엔터
   const loginEnter = (e) => {
-    if (e.key === "Enter") {
+    if (e.keyCode === 13) {
       handleLogin();
     }
   };
@@ -99,7 +98,7 @@ export default function Login() {
                     </div>
                   </div>
                 </MoveImage>
-                <Form id="login" onSubmit={handleLogin}>
+                <Form id="login">
                   <LoginTitle>Sign In</LoginTitle>
                   <LoginInput>
                     <div>
@@ -138,7 +137,9 @@ export default function Login() {
                     />
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
-                  <SignBtn type="submit">Sign In</SignBtn>
+                  <SignBtn type="button" onClick={handleLogin}>
+                    Sign In
+                  </SignBtn>
                 </Form>
                 <CreateLink to={"/signup"} rel="npm:signup">
                   Create Account
