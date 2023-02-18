@@ -1,7 +1,7 @@
 import { lazy } from "react";
 
 export { default as Layout } from "./Layout";
-export { default as Main } from "./Main";
+export const Main = lazy(() => import("./Main.jsx"));
 export const Error = lazy(() => import("./Error.jsx"));
 export const Pricing = lazy(() => import("./Pricing.jsx"));
 export const Pro = lazy(() => import("./Pro.jsx"));

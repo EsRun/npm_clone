@@ -11,7 +11,14 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Main />}></Route>
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<div>로딩 중. . .</div>}>
+                <Main />
+              </Suspense>
+            }
+          ></Route>
           <Route
             path="product"
             element={
