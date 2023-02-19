@@ -29,7 +29,9 @@ export default function Profile() {
     setProfileToggle((el) => !el);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    console.log("profile component");
+  }, []);
   return (
     <>
       <ProfileBox onClick={profileToggleFn}>
