@@ -26,7 +26,8 @@ export default function Profile() {
 
   // 프로필 토글
   const profileToggleFn = (e) => {
-    setProfileToggle((el) => !el);
+    // 프로필 아이콘 클릭만 토글 허용 되도록 변경 필요
+    //setProfileToggle((el) => !el);
   };
 
   useEffect(() => {
