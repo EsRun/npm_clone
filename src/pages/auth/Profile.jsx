@@ -26,8 +26,7 @@ export default function Profile() {
 
   // 프로필 토글
   const profileToggleFn = (e) => {
-    // 프로필 아이콘 클릭만 토글 허용 되도록 변경 필요
-    //setProfileToggle((el) => !el);
+    setProfileToggle((el) => !el);
   };
 
   useEffect(() => {
@@ -35,9 +34,9 @@ export default function Profile() {
   }, []);
   return (
     <>
-      <ProfileBox onClick={profileToggleFn}>
+      <ProfileBox>
         <nav>
-          <ProfileBtn>
+          <ProfileBtn onClick={profileToggleFn}>
             <ProfileBtnImg
               alt="avatar"
               src="https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9hMWNjYWI4NjQyNDIzNTM2NTZlNzczMDkyOGZlNDUzMT9zaXplPTUwJmRlZmF1bHQ9cmV0cm8ifQ.2Ly7jdtT7TS3c0J2TebQVuFSEufCpOqZCSihSs_E-pE"
