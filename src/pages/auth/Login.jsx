@@ -29,7 +29,6 @@ export default function Login() {
   });
 
   const handleLogin = (e) => {
-    console.log(authValues.password);
     dispatch(
       authActions.logIn({ isAuth: true, userName: authValues.username })
     );
