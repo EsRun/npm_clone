@@ -23,16 +23,25 @@ export default function Login() {
   const dispatch = useDispatch();
   const input1 = useRef(null);
   const auth = useSelector((state) => state.auth.isAuth);
-  const [userId, setUserId] = useState("");
+  const [authValues, setAuthValues] = useState({
+    username: "",
+    password: "",
+  });
 
   const handleLogin = (e) => {
-    dispatch(authActions.logIn({ isAuth: true, userName: userId }));
+    console.log(authValues.password);
+    dispatch(
+      authActions.logIn({ isAuth: true, userName: authValues.username })
+    );
     navigate("/");
   };
 
   // 사용자 정보 설정
   const getUserInfo = (e) => {
-    setUserId(e.target.value);
+    setAuthValues({
+      ...authValues,
+      [e.target.name]: e.target.value,
+    });
   };
 
   // 로그인 엔터
@@ -112,7 +121,7 @@ export default function Login() {
                       aria-required="false"
                       aria-invalid="false"
                       name="username"
-                      value={userId}
+                      value={authValues.username}
                       onChange={getUserInfo}
                       onKeyDown={loginEnter}
                       ref={input1}
@@ -133,6 +142,8 @@ export default function Login() {
                       required=""
                       minLength="0"
                       name="password"
+                      value={authValues.password}
+                      onChange={getUserInfo}
                       element="input"
                     />
                   </LoginInput>
