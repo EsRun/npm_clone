@@ -28,6 +28,7 @@ export default function Login() {
     password: "",
   });
 
+  const { username, password } = authValues;
   const handleLogin = (e) => {
     dispatch(
       authActions.logIn({ isAuth: true, userName: authValues.username })
@@ -120,7 +121,7 @@ export default function Login() {
                       aria-required="false"
                       aria-invalid="false"
                       name="username"
-                      value={authValues.username}
+                      value={username}
                       onChange={getUserInfo}
                       onKeyDown={loginEnter}
                       ref={input1}
@@ -141,7 +142,7 @@ export default function Login() {
                       required=""
                       minLength="0"
                       name="password"
-                      value={authValues.password}
+                      value={password}
                       onChange={getUserInfo}
                       element="input"
                     />
