@@ -29,10 +29,8 @@ export default function Login() {
   });
 
   const { username, password } = authValues;
-  const handleLogin = (e) => {
-    dispatch(
-      authActions.logIn({ isAuth: true, userName: authValues.username })
-    );
+  const handleLogin = () => {
+    dispatch(authActions.logIn({ isAuth: true, userName: username }));
     navigate("/");
   };
 
