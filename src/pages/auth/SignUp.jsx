@@ -79,6 +79,10 @@ export default function SignUp() {
                       aria-invalid="false"
                       name="username"
                     />
+                    <p>
+                      Your email address will be added to the metadata of
+                      packages that you publish, so it may be seen publicly.
+                    </p>
                   </LoginInput>
                   <LoginInput>
                     <div>
@@ -95,6 +99,15 @@ export default function SignUp() {
                       minLength="0"
                       name="password"
                     />
+                    <p>
+                      Minimum of 10 characters and must meet our{" "}
+                      <Link
+                        to={"https://docs.npmjs.com/creating-a-strong-password"}
+                        aria-label="Minimum of 10 characters and must meet our  password guidelines."
+                      >
+                        password guidelines
+                      </Link>
+                    </p>
                   </LoginInput>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
                   <SignBtn type="button">Create an Account</SignBtn>
