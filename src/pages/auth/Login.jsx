@@ -7,15 +7,15 @@ import {
   Container,
   Form,
   Header,
-  LoginBox,
-  LoginInput,
-  LoginLabel,
-  LoginTitle,
+  AuthBox,
+  Input,
+  Label,
+  Title,
   MoveImage,
   SignBtn,
   ForgotLabel,
   CreateLink,
-} from "../../components/styles/LoginStyle";
+} from "../../resources/css/auth/AuthStyle";
 import { useState } from "react";
 
 export default function Login() {
@@ -69,7 +69,7 @@ export default function Login() {
               </svg>
             </Link>
           </Header>
-          <LoginBox>
+          <AuthBox>
             <div
               style={{
                 boxShadow: "0 10px 20px rgb(0 0 0 / 20%)",
@@ -106,12 +106,12 @@ export default function Login() {
                   </div>
                 </MoveImage>
                 <Form id="login">
-                  <LoginTitle>Sign In</LoginTitle>
-                  <LoginInput>
+                  <Title>Sign In</Title>
+                  <Input>
                     <div>
-                      <LoginLabel htmlFor="login_username" autoComplete="off">
+                      <Label htmlFor="login_username" autoComplete="off">
                         Username
-                      </LoginLabel>
+                      </Label>
                     </div>
                     <input
                       type="text"
@@ -124,13 +124,13 @@ export default function Login() {
                       onKeyDown={loginEnter}
                       ref={input1}
                     />
-                  </LoginInput>
+                  </Input>
                   <ForgotLabel>
                     <Link to={"/forgot"}>Forgot password?</Link>
                   </ForgotLabel>
-                  <LoginInput>
+                  <Input>
                     <div>
-                      <LoginLabel htmlFor="login_password">Password</LoginLabel>
+                      <Label htmlFor="login_password">Password</Label>
                     </div>
                     <input
                       type="password"
@@ -144,7 +144,7 @@ export default function Login() {
                       onChange={getUserInfo}
                       element="input"
                     />
-                  </LoginInput>
+                  </Input>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
                   <SignBtn type="button" onClick={handleLogin}>
                     Sign In
@@ -155,7 +155,7 @@ export default function Login() {
                 </CreateLink>
               </div>
             </div>
-          </LoginBox>
+          </AuthBox>
         </Container>
       </TopBorder>
     </>

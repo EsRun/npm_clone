@@ -7,15 +7,15 @@ import {
   Container,
   Form,
   Header,
-  LoginBox,
-  LoginInput,
-  LoginLabel,
-  LoginTitle,
+  AuthBox,
+  Input,
+  Label,
+  Title,
   MoveImage,
   SignBtn,
   ForgotLabel,
   CreateLink,
-} from "../../components/styles/LoginStyle";
+} from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function SignUp() {
               </svg>
             </Link>
           </Header>
-          <LoginBox>
+          <AuthBox>
             <div
               style={{
                 boxShadow: "0 10px 20px rgb(0 0 0 / 20%)",
@@ -51,12 +51,12 @@ export default function SignUp() {
             >
               <div>
                 <Form id="login">
-                  <LoginTitle>Sign Up</LoginTitle>
-                  <LoginInput>
+                  <Title>Sign Up</Title>
+                  <Input>
                     <div>
-                      <LoginLabel htmlFor="login_username" autoComplete="off">
+                      <Label htmlFor="login_username" autoComplete="off">
                         Username *
-                      </LoginLabel>
+                      </Label>
                     </div>
                     <input
                       type="text"
@@ -65,12 +65,12 @@ export default function SignUp() {
                       aria-invalid="false"
                       name="username"
                     />
-                  </LoginInput>
-                  <LoginInput>
+                  </Input>
+                  <Input>
                     <div>
-                      <LoginLabel htmlFor="login_username" autoComplete="off">
+                      <Label htmlFor="login_username" autoComplete="off">
                         Email address *
-                      </LoginLabel>
+                      </Label>
                     </div>
                     <input
                       type="text"
@@ -83,12 +83,10 @@ export default function SignUp() {
                       Your email address will be added to the metadata of
                       packages that you publish, so it may be seen publicly.
                     </p>
-                  </LoginInput>
-                  <LoginInput>
+                  </Input>
+                  <Input>
                     <div>
-                      <LoginLabel htmlFor="login_password">
-                        Password *
-                      </LoginLabel>
+                      <Label htmlFor="login_password">Password *</Label>
                     </div>
                     <input
                       type="password"
@@ -108,7 +106,7 @@ export default function SignUp() {
                         password guidelines
                       </Link>
                     </p>
-                  </LoginInput>
+                  </Input>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
                   <SignBtn type="button">Create an Account</SignBtn>
                 </Form>
@@ -117,7 +115,7 @@ export default function SignUp() {
                 </CreateLink>
               </div>
             </div>
-          </LoginBox>
+          </AuthBox>
         </Container>
       </TopBorder>
     </>

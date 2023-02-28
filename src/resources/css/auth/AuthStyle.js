@@ -18,7 +18,7 @@ export const Header = styled.div`
     width: 14.4rem;
   }
 `;
-export const LoginBox = styled.div`'
+export const AuthBox = styled.div`'
     
   `;
 
@@ -103,14 +103,14 @@ export const MoveImage = styled.div`
 export const Form = styled.form`
   color: #000000b3;
 `;
-export const LoginTitle = styled.h1`
+export const Title = styled.h1`
   margin-bottom: 1.6rem;
   padding-bottom: 1.6rem;
   font-size: 2.4rem;
   font-weight: 600;
   border-bottom: 1px solid #0000001a;
 `;
-export const LoginInput = styled.div`
+export const Input = styled.div`
   font-size: 1.6rem;
   input {
     margin: 0.8rem 0.8rem 0.8rem 0;
@@ -121,7 +121,7 @@ export const LoginInput = styled.div`
     border-radius: 0.5rem;
   }
 `;
-export const LoginLabel = styled.label`
+export const Label = styled.label`
   margin: 0.4rem 0 0.8rem;
   font-weight: bold;
 `;
