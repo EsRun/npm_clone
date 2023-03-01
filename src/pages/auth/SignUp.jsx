@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { authActions } from "../../redux/reducer";
-import { useSelector, useDispatch } from "react-redux";
 import {
   TopBorder,
   Container,
@@ -18,14 +16,7 @@ import {
 } from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
   const input1 = useRef(null);
-  const auth = useSelector((state) => state.auth.isAuth);
-  const [authValues, setAuthValues] = useState({
-    username: "",
-    password: "",
-  });
 
   const { username, password } = authValues;
   return (
