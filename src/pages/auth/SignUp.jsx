@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   TopBorder,
   Container,
@@ -9,16 +9,12 @@ import {
   Input,
   Label,
   Title,
-  MoveImage,
   SignBtn,
-  ForgotLabel,
   CreateLink,
 } from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
   const input1 = useRef(null);
-
-  const { username, password } = authValues;
   return (
     <>
       <TopBorder>
