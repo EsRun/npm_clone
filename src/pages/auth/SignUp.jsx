@@ -14,7 +14,9 @@ import {
 } from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
-  const input1 = useRef(null);
+  const inputUserName = useRef(null);
+  const inputPassword = useRef(null);
+
   return (
     <>
       <TopBorder>
