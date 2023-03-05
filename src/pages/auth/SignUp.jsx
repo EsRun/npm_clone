@@ -14,6 +14,8 @@ import {
 } from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
+  const inputRef = useRef([]); // 배열로 ref 선언
+  //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
   const inputUserName = useRef(null);
   const inputPassword = useRef(null);
 
@@ -49,10 +51,10 @@ export default function SignUp() {
                     </div>
                     <input
                       type="text"
-                      id="login_username"
                       aria-required="false"
                       aria-invalid="false"
                       name="username"
+                      ref={(el) => (inputRef.current[0] = el)}
                     />
                   </Input>
                   <Input>
@@ -63,10 +65,10 @@ export default function SignUp() {
                     </div>
                     <input
                       type="text"
-                      id="login_username"
                       aria-required="false"
                       aria-invalid="false"
-                      name="username"
+                      name="email"
+                      ref={(el) => (inputRef.current[1] = el)}
                     />
                     <p>
                       Your email address will be added to the metadata of
@@ -85,6 +87,7 @@ export default function SignUp() {
                       required=""
                       minLength="0"
                       name="password"
+                      ref={(el) => (inputRef.current[2] = el)}
                     />
                     <p>
                       Minimum of 10 characters and must meet our{" "}
