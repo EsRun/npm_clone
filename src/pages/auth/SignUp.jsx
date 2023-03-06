@@ -16,8 +16,7 @@ import {
 export default function SignUp() {
   const inputRef = useRef([]); // 배열로 ref 선언
   //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
-  const inputUserName = useRef(null);
-  const inputPassword = useRef(null);
+  // submit 시 처리 함수 작성
 
   return (
     <>
