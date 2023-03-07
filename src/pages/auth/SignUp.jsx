@@ -16,8 +16,12 @@ import {
 export default function SignUp() {
   const inputRef = useRef([]); // 배열로 ref 선언
   //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
-  // submit 시 처리 함수 작성
 
+  // 회원가입 버튼
+  const handleSignUp = () => {
+    //dispatch(authActions.logIn({ isAuth: true, userName: username }));
+    navigate("/");
+  };
   return (
     <>
       <TopBorder>
@@ -99,7 +103,9 @@ export default function SignUp() {
                     </p>
                   </Input>
                   <input type="hidden" aria-hidden="true" name="csrftoken" />
-                  <SignBtn type="button">Create an Account</SignBtn>
+                  <SignBtn type="button" onClick={handleSignUp}>
+                    Create an Account
+                  </SignBtn>
                 </Form>
                 <CreateLink to={"/signup"} rel="npm:signup">
                   Create Account
