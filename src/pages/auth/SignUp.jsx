@@ -22,6 +22,7 @@ export default function SignUp() {
   });
   //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
 
+  // input state update
   const setSignUp = (e) => {
     setSignUpValues({
       ...signUpValues,
@@ -35,6 +36,7 @@ export default function SignUp() {
     alert(JSON.stringify(signUpValues));
     //Navigate("/");
   };
+
   return (
     <>
       <TopBorder>
