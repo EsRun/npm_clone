@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import {
   TopBorder,
   Container,
@@ -15,12 +15,25 @@ import {
 
 export default function SignUp() {
   const inputRef = useRef([]); // 배열로 ref 선언
+  const [signUpValues, setSignUpValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
   //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
+
+  const setSignUp = (e) => {
+    setSignUpValues({
+      ...signUpValues,
+      [e.target.name]: [e.target.value],
+    });
+  };
 
   // 회원가입 버튼
   const handleSignUp = () => {
     //dispatch(authActions.logIn({ isAuth: true, userName: username }));
-    navigate("/");
+    alert(JSON.stringify(signUpValues));
+    //Navigate("/");
   };
   return (
     <>
@@ -57,6 +70,7 @@ export default function SignUp() {
                       aria-required="false"
                       aria-invalid="false"
                       name="username"
+                      onChange={setSignUp}
                       ref={(el) => (inputRef.current[0] = el)}
                     />
                   </Input>
@@ -71,6 +85,7 @@ export default function SignUp() {
                       aria-required="false"
                       aria-invalid="false"
                       name="email"
+                      onChange={setSignUp}
                       ref={(el) => (inputRef.current[1] = el)}
                     />
                     <p>
@@ -90,6 +105,7 @@ export default function SignUp() {
                       required=""
                       minLength="0"
                       name="password"
+                      onChange={setSignUp}
                       ref={(el) => (inputRef.current[2] = el)}
                     />
                     <p>
