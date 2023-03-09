@@ -32,9 +32,8 @@ export default function SignUp() {
 
   // 회원가입 버튼
   const handleSignUp = () => {
-    //dispatch(authActions.logIn({ isAuth: true, userName: username }));
-    alert(JSON.stringify(signUpValues));
-    //Navigate("/");
+    console.log(JSON.stringify(signUpValues));
+    Navigate("/");
   };
 
   return (
