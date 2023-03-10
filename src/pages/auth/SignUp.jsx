@@ -36,6 +36,9 @@ export default function SignUp() {
     Navigate("/");
   };
 
+  useEffect(() => {
+    console.log("signUp component");
+  }, []);
   return (
     <>
       <TopBorder>
