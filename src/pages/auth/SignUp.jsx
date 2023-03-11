@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import {
   TopBorder,
@@ -38,7 +38,8 @@ export default function SignUp() {
 
   useEffect(() => {
     console.log("signUp component");
-  }, []);
+    console.log("inputRef", inputRef);
+  }, [inputRef]);
   return (
     <>
       <TopBorder>
