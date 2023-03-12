@@ -33,7 +33,16 @@ export default function SignUp() {
   // 회원가입 버튼
   const handleSignUp = () => {
     console.log(JSON.stringify(signUpValues));
+    inputCheck();
     Navigate("/");
+  };
+
+  // 입력 체크
+  const inputCheck = () => {
+    // id
+    if (inputRef.current[0].value === "") {
+      inputRef.current[0].focus();
+    }
   };
 
   useEffect(() => {
