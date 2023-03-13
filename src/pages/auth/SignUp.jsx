@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   TopBorder,
   Container,
@@ -14,6 +14,7 @@ import {
 } from "../../resources/css/auth/AuthStyle";
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const inputRef = useRef([]); // 배열로 ref 선언
   const [signUpValues, setSignUpValues] = useState({
     username: "",
@@ -33,18 +34,20 @@ export default function SignUp() {
   // 회원가입 버튼
   const handleSignUp = () => {
     console.log(JSON.stringify(signUpValues));
-    inputCheck();
-    //Navigate("/");
+    if (inputCheck() === false) return false;
+    navigate("/");
   };
 
   // 입력 체크
   const inputCheck = () => {
-    for (let el of inputRef.current) {
+    let isInput = true;
+    for (let el of inputRef.current)
       if (el.value === "") {
+        isInput = false;
         el.focus();
         break;
       }
-    }
+    return isInput;
   };
 
   useEffect(() => {
