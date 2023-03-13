@@ -34,14 +34,16 @@ export default function SignUp() {
   const handleSignUp = () => {
     console.log(JSON.stringify(signUpValues));
     inputCheck();
-    Navigate("/");
+    //Navigate("/");
   };
 
   // 입력 체크
   const inputCheck = () => {
-    // id
-    if (inputRef.current[0].value === "") {
-      inputRef.current[0].focus();
+    for (let el of inputRef.current) {
+      if (el.value === "") {
+        el.focus();
+        break;
+      }
     }
   };
 
