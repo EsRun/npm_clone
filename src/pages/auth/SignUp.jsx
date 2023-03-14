@@ -34,7 +34,8 @@ export default function SignUp() {
   const handleSignUp = () => {
     console.log(JSON.stringify(signUpValues));
     if (inputCheck() === false) return false;
-    navigate("/");
+    // replace : 페이지 이동 시 히스토리 미저장 여부
+    navigate("/login", { replace: true });
   };
 
   // 입력 체크
