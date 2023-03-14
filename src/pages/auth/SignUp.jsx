@@ -21,7 +21,6 @@ export default function SignUp() {
     email: "",
     password: "",
   });
-  //if(inputRef.current[0].value === "") alert('이름을 입력해 주세요.');
 
   // input state update
   const setSignUp = (e) => {
