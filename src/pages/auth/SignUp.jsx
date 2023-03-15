@@ -34,7 +34,7 @@ export default function SignUp() {
   const handleSignUp = () => {
     console.log(JSON.stringify(signUpValues));
     if (inputCheck() === false) return false;
-    // replace : 페이지 이동 시 히스토리 미저장 여부
+    // replace : 페이지 이동 시 히스토리 미저장 여부, 뒤로가기 시 루트 페이지로 이동
     navigate("/login", { replace: true });
   };
 
