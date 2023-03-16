@@ -50,6 +50,7 @@ export default function Login() {
   };
 
   useEffect(() => {
+    // 페이지 접속 시 id input에 포커싱
     input1.current.focus();
     // 로그인 상태 시 루트로 이동, replace 옵션 차이가 없음 뭐지?
     if (auth) navigate("/", { replace: false });
